@@ -7,7 +7,7 @@ import TableList from './components/TableList'
 import employees from './employees.json'
 
 function App() {
-    const [ tableManager, setList ]= useState( { list: employees, filter: '', order: 'id' } )
+    const [ tableManager, setList ]= useState( { list: employees, filter: '', order: 'id', orderAscDec:'ascending' } )
     // console.log( `Updated list check`, tableManager.list )
 
     // function update name filter
@@ -16,20 +16,23 @@ function App() {
       setList( { ...tableManager, filter, list: filterList })
     }
 
+
+
     // function to update the order of the table
     function updateOrder( order ){
-      const newOrderForList = tableManager.list.sort(function(a, b) {
-        return a[order] > b[order] ? 1 : -1;
+      const newOrderForList = tableManager.list.sort(function(a, b) {        
+          return a[order] > b[order] ? 1 : -1;
       })
       setList( { ...tableManager, order, list: newOrderForList })
     }
 
     return(
       <>
-        <nav className="hero text-center">
-          <h1>Employee List</h1>
+        <nav className="container-fluid myNav text-center justify-content-center">
+          <h1>RANDZE's</h1>
+          <h2>employee list</h2>
         </nav>
-          <div className="container justify-content-center">   
+          <div className="container" style={{maxWidth:'720px'}} >
             <form>
                 <TableFilter filter={tableManager.filter} updateFilter={updateFilter} />
                 <TableOrder order={tableManager.order} updateOrder={updateOrder} />

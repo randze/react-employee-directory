@@ -8,11 +8,12 @@ function TableOrder( props ){
 
         props.updateOrder( value )
     }
+
     return (
-        <div className="mb-3 row">
-            <label className="col-sm-2 col-form-label">Order By</label>
-            <div className="col-sm-10">
-                <select onChange={changeOrder} value={props.order} className="form-select form-select-lg mb-3">
+        <div className="row">
+            <label className="col-12 col-form-label">Order By</label>
+            <div className="col-12">
+                <select onChange={changeOrder} value={props.order} className="form-select form-select-md" style={{maxWidth: '250px'}}>
                     <option value='id'>ID</option>
                     <option value='name'>Name</option>
                     <option value="city">City</option>
