@@ -12,7 +12,7 @@ Can check out the sample app hosted on Heroku !
 
 ## How it works
 - Just a simple search by name filter
-- Order the table in ascending/descending order by click the table-head buttons
+- Order the table in ascending/descending order by clicking the table-head buttons
 
 ## Improvements to be done
 - Refactoring code
