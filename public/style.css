@@ -26,3 +26,19 @@ footer {
     padding-top: 5px;
     margin-top: .5rem;
 }
+
+button {
+    color: #fff;
+    border: solid 2px black;
+    background-color: #600080;
+    width: 90px;
+    border-radius: 25px;
+}
+
+thead button.ascending::after {
+    content: ' +';
+  }
+  
+  thead button.descending::after {
+    content: ' -';
+  }

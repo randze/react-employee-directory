@@ -12,7 +12,7 @@ function TableFilter( props ){
         <div className="row">
             <label htmlFor="name" className="col-12 col-form-label">Name Search</label>
             <div className="col-12">
-                <input onChange={handleInputChange} type="text" className="form-control" id="name" value={props.filter} style={{maxWidth: '450px'}} />
+                <input onChange={handleInputChange} type="text" id="name" value={props.filter} className="form-control" />
             </div>
         </div>
     )
